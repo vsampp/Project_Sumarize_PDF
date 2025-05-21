@@ -25,7 +25,7 @@ Original file is located at
 # *****************************************************************************
 from google import genai
 import os
-from google.colab import userdata
+#from google.colab import userdata - use in Colab dev mode
 from google.adk.agents import Agent
 from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
@@ -109,8 +109,8 @@ def process_pdf_with_gemini(file_path, prompt):
     else:
         return None
 
-# Setting API Key do Google Gemini
-os.environ["GOOGLE_API_KEY"] = userdata.get('GOOGLE_API_KEY')
+# Setting API Key do Google Gemini - used in Colab dev mode
+#os.environ["GOOGLE_API_KEY"] = userdata.get('GOOGLE_API_KEY')
 
 # Create Client SDK
 clientSDK = genai.Client()
