@@ -173,14 +173,8 @@ Assegure-se de compreender plenamente a estrutura, o fluxo de argumentos e as nu
 
 """
 
-result = process_pdf_with_gemini("/content/Artificial intelligence act and regulatory sandboxes.pdf", few_shot_prompt)
-
-to_markdown(result)
-
-# Commented out IPython magic to ensure Python compatibility.
-# %pip install -q streamlit
-
 # --- Interface Streamlit ---
+%pip install -q streamlit
 
 import streamlit as st
 
