@@ -232,7 +232,7 @@ if uploaded_file is not None:
 
     if st.button("Sumarizar"):
         with st.spinner("Gerando resumo... Isso pode levar alguns momentos."):
-          summary_result = process_pdf_with_gemini(uploaded_file, few_shot_prompt)
+          summary_result = process_pdf_with_gemini(tmp_file_path, few_shot_prompt)
 
           if summary_result:
               st.subheader("Sumarização Realizada:")
