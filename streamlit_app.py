@@ -234,5 +234,6 @@ if uploaded_file is not None:
               st.subheader("Sumarização Realizada:")
               st.markdown(summary_result)
           else:
+              st.markdown(few_shot_prompt)
               st.error("Não foi possível gerar a sumarização.")
 
