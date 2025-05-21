@@ -111,6 +111,12 @@ def process_pdf_with_gemini(file_path, prompt):
 
 # Setting API Key do Google Gemini - used in Colab dev mode
 #os.environ["GOOGLE_API_KEY"] = userdata.get('GOOGLE_API_KEY')
+try:
+    os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
+except KeyError:
+    st.error("Erro: A chave da API do Gemini (GOOGLE_API_KEY) não foi encontrada nos segredos do Streamlit.")
+    st.stop() # Interrompe a execução do app se a chave não for encontrada
+
 
 # Create Client SDK
 clientSDK = genai.Client()
