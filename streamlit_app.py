@@ -12,13 +12,13 @@ Original file is located at
 # INSTALLATIONS
 # *****************************************************************************
 # Install SDK Google Gen AI.
-pip -q install google-genai
+!pip -q install google-genai
 
 # Install ADK Google Agents
-pip install -q google-adk
+!pip install -q google-adk
 
 # Install PyPDF2 Library
-pip install -q PyPDF2
+!pip install -q PyPDF2
 
 # *****************************************************************************
 # IMPORTS LIBRARY, SDKs, ADK AND FRAMEWORKS
@@ -174,7 +174,7 @@ Assegure-se de compreender plenamente a estrutura, o fluxo de argumentos e as nu
 """
 
 # --- Interface Streamlit ---
-pip install -q streamlit
+!pip install -q streamlit
 
 import streamlit as st
 
