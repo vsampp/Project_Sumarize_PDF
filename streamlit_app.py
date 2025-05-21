@@ -174,7 +174,7 @@ Assegure-se de compreender plenamente a estrutura, o fluxo de argumentos e as nu
 """
 
 # --- Interface Streamlit ---
-%pip install -q streamlit
+#%pip install -q streamlit
 
 import streamlit as st
 
