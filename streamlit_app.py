@@ -224,7 +224,10 @@ st.subheader("Upload do Arquivo PDF")
 uploaded_file = st.file_uploader("Escolha um arquivo PDF", type="pdf")
 
 if uploaded_file is not None:
-    st.success(f"Arquivo '{uploaded_file.name}' carregado com sucesso!")
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp_file:
+        tmp_file.write(uploaded_file.getvalue())
+        tmp_file_path = tmp_file.name
+        st.success(f"Arquivo '{uploaded_file.name}' carregado com sucesso!")
 
     if st.button("Sumarizar"):
         with st.spinner("Gerando resumo... Isso pode levar alguns momentos."):
@@ -233,7 +236,9 @@ if uploaded_file is not None:
           if summary_result:
               st.subheader("Sumarização Realizada:")
               st.markdown(summary_result)
+              try:
+                os.remove(tmp_file_path)
+              except OSError as e:
+                st.warning(f"Não foi possível remover o arquivo temporário {tmp_file_path}: {e}")
           else:
-              st.markdown(summary_result)
               st.error("Não foi possível gerar a sumarização.")
-
