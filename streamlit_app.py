@@ -253,17 +253,15 @@ if uploaded_file is not None:
           summary_result = process_pdf_with_gemini(tmp_file_path, few_shot_prompt_sumarize)
 
           if summary_result:
+              st.markdown("Resumo finalizado!")
              # Generate PDF for download
               pdf_bytes = create_pdf_for_download(summary_result, f"resumo_{uploaded_file.name}")
               st.download_button(
-                  label="Download Resumo em PDF",
+                  label="Baixar Resumo em PDF",
                   data=pdf_bytes,
                   file_name=f"resumo_{uploaded_file.name}",
                   mime="application/pdf"
               )
-
-              
-              st.subheader("Resumo finalizado, aproveite:")
               st.markdown(summary_result)
               try:
                 os.remove(tmp_file_path)
