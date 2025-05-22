@@ -2,7 +2,8 @@
 """
 Study Project: Summarize texts, articles, and physical and digital notes
 Created by: Victor Sampaio
-
+Created date: 19.05.25
+Last-update: 22.05.25
 """
 
 # *****************************************************************************
