@@ -162,27 +162,26 @@ Assegure-se de compreender plenamente a estrutura, o fluxo de argumentos e as nu
 5.  **Formato de Saída:**
     Apresente o resumo utilizando a seguinte estrutura em Markdown, preenchendo as seções com o conteúdo extraído:
 
-```markdown
-### Resumo Detalhado do Documento: [Título do PDF, se disponível, ou "Documento Fornecido"]
+Resumo Detalhado do Documento: [Título do PDF, se disponível, ou "Documento Fornecido"]
 
-**1. Introdução e Contexto Geral:**
+1. Introdução e Contexto Geral:
 [Breve parágrafo contextualizando o documento, seu propósito e o que ele aborda.]
 
-**2. Principais Seções/Capítulos e Tópicos Abordados:**
+2. Principais Seções/Capítulos e Tópicos Abordados:
 
-* **[Título da Seção/Capítulo 1]:**
-    * **Conceito/Ponto 1.1:** [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
-    * **Conceito/Ponto 1.2:** [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
-    * ... (Adicionar mais pontos conforme necessário)
+[Título da Seção/Capítulo 1]:
+    Conceito/Ponto 1.1: [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
+    Conceito/Ponto 1.2: [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
+    ... (Adicionar mais pontos conforme necessário)
 
-* **[Título da Seção/Capítulo 2]:**
-    * **Conceito/Ponto 2.1:** [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
-    * **Conceito/Ponto 2.2:** [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
-    * ... (Adicionar mais pontos conforme necessário)
+[Título da Seção/Capítulo 2]:
+    Conceito/Ponto 2.1: [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
+    Conceito/Ponto 2.2: [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
+    ... (Adicionar mais pontos conforme necessário)
 
-* ... (Continuar para todas as seções/capítulos relevantes do PDF)
+... (Continuar para todas as seções/capítulos relevantes do PDF)
 
-**3. Conclusões Principais e Implicações:**
+3. Conclusões Principais e Implicações:
 [Um parágrafo final sintetizando as conclusões mais importantes do documento e suas possíveis implicações ou recomendações.]
 ```
 """
