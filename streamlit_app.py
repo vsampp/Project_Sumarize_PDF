@@ -21,12 +21,10 @@ import textwrap # For format output text
 import requests # For HTTP requests
 import warnings
 import PyPDF2 as pdf # For read PDF
-
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet
 from io import BytesIO # To handle in-memory bytes for PDF
-
 
 warnings.filterwarnings("ignore")
 
@@ -158,27 +156,28 @@ Assegure-se de compreender plenamente a estrutura, o fluxo de argumentos e as nu
 4.  **Formato de Saída:**
     Apresente o resumo utilizando a seguinte estrutura em Markdown, preenchendo as seções com o conteúdo extraído:
 
-```markdown
-### Resumo Detalhado do Documento: [Título do PDF, se disponível, ou "Documento Fornecido"]
+Resumo Detalhado do Documento: [Título do PDF, se disponível, ou "Documento Fornecido"]
 
-**1. Introdução e Contexto Geral:**
+1. Introdução e Contexto Geral:
+
 [Breve parágrafo contextualizando o documento, seu propósito e o que ele aborda.]
 
-**2. Principais Seções/Capítulos e Tópicos Abordados:**
+2. Principais Seções/Capítulos e Tópicos Abordados:
 
-* **[Título da Seção/Capítulo 1]:**
-    * **Conceito/Ponto 1.1:** [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
-    * **Conceito/Ponto 1.2:** [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
-    * ... (Adicionar mais pontos conforme necessário)
+[Título da Seção/Capítulo 1]:
+    Conceito/Ponto 1.1: [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
+    Conceito/Ponto 1.2: [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
+    (Adicionar mais pontos conforme necessário)
 
-* **[Título da Seção/Capítulo 2]:**
-    * **Conceito/Ponto 2.1:** [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
-    * **Conceito/Ponto 2.2:** [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
-    * ... (Adicionar mais pontos conforme necessário)
+[Título da Seção/Capítulo 2]:
+    Conceito/Ponto 2.1: [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
+    Conceito/Ponto 2.2: [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
+    (Adicionar mais pontos conforme necessário)
 
-* ... (Continuar para todas as seções/capítulos relevantes do PDF)
+(Continuar para todas as seções/capítulos relevantes do PDF)
 
-**3. Conclusões Principais e Implicações:**
+3. Conclusões Principais e Implicações:
+
 [Um parágrafo final sintetizando as conclusões mais importantes do documento e suas possíveis implicações ou recomendações.]
 
 """
@@ -232,8 +231,8 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("Revisar PDF's com Google Gemini")
-st.subheader("Revise seus textos, artigos, anotações físicas e digitais com resumos gerados pela Google Gemini")
+st.subheader("Revisar PDF's com Google Gemini")
+st.markdown("Revise seus textos, artigos, anotações físicas e digitais com resumos gerados pela Google Gemini")
 st.markdown("Faça o upload de seu arquivo PDF:")
 uploaded_file = st.file_uploader("Escolha um arquivo PDF", type="pdf")
 st.markdown("CUIDADO: O arquivo será enviado ao Google, portanto, NÃO ENVIE ARQUIVOS COM DADOS PESSOAIS. Use por sua própria responsabilidade.")
