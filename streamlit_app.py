@@ -208,11 +208,11 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("Processamento de PDF's com Google Gemini")
-st.markdown("Resuma seus textos, artigos, anotações físicas e digitais. Utilize para revisar conteúdos.")
-
-st.subheader("Faça o upload de seu arquivo PDF:")
+st.title("Revisar PDF's com Google Gemini")
+st.subheader("Revise seus textos, artigos, anotações físicas e digitais com resumos gerados pela Google Gemini")
+st.markdown("Faça o upload de seu arquivo PDF:")
 uploaded_file = st.file_uploader("Escolha um arquivo PDF", type="pdf")
+st.markdown("CUIDADO: O arquivo será enviado ao Google, portanto, NÃO ENVIE ARQUIVOS COM DADOS PESSOAIS. Use por sua própria responsabilidade.")
 
 if uploaded_file is not None:
     with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp_file:
@@ -221,7 +221,6 @@ if uploaded_file is not None:
         st.success(f"PDF '{uploaded_file.name}' carregado com sucesso!")
 
     if st.button("Sumarizar"):
-        st.markdown("CUIDADO: O arquivo será enviado ao Google, portanto, NÃO ENVIE ARQUIVOS COM DADOS PESSOAIS. Use por sua própria responsabilidade.")
         with st.spinner("Gerando resumo... Isso pode levar alguns momentos."):
           summary_result = process_pdf_with_gemini(tmp_file_path, few_shot_prompt_sumarize)
 
