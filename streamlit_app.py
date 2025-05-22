@@ -182,7 +182,7 @@ Resumo Detalhado do Documento: [Título do PDF, se disponível, ou "Documento Fo
 
 3. Conclusões Principais e Implicações:
 [Um parágrafo final sintetizando as conclusões mais importantes do documento e suas possíveis implicações ou recomendações.]
-```
+
 """
 
 # *****************************************************************************
