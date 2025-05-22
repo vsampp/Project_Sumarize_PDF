@@ -208,10 +208,10 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("Sistema de processamento de PDF's com AI")
+st.title("Processamento de PDF's com Google Gemini")
 st.markdown("Resuma seus textos, artigos, anotações físicas e digitais. Utilize para revisar conteúdos.")
 
-st.subheader("Faça o upload de seu arquivo PDF para análise pelo Google Gemini:")
+st.subheader("Faça o upload de seu arquivo PDF:")
 uploaded_file = st.file_uploader("Escolha um arquivo PDF", type="pdf")
 
 if uploaded_file is not None:
