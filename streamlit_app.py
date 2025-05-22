@@ -189,7 +189,7 @@ Resumo Detalhado do Documento: [Título do PDF, se disponível, ou "Documento Fo
 # INTERFACE STREAMLIT
 # *****************************************************************************
 
-st.set_page_config(layout="centered", page_title="Sistema de processamento de PDF's com AI")
+st.set_page_config(layout="centered", page_title="Revisar PDF's")
 
 st.markdown(
     """
