@@ -153,33 +153,38 @@ Assegure-se de compreender plenamente a estrutura, o fluxo de argumentos e as nu
     * **Evite Perdas:** Tenha extremo cuidado para não omitir informações críticas, detalhes importantes ou nuances significativas
     do documento original.
 
-4.  **Formato de Saída:**
+4. Qualidade da Apresentação e Legibilidade:**
+    * **Quebras de Parágrafo:** Utilize linhas em branco entre parágrafos para melhorar a legibilidade e separar ideias distintas.
+    * **Comprimento das Linhas:** Mantenha as frases e parágrafos concisos. Evite linhas excessivamente longas para que o texto se ajuste bem em diferentes tamanhos de tela e não pareça "quebrado". Se uma ideia for complexa, divida-a em frases mais curtas ou em múltiplos parágrafos.
+    * **Estrutura Visual:** Use cabeçalhos (###), negrito (**) e listas (com `*` ou `1.`) de forma consistente para criar uma estrutura visual clara e fácil de escanar.
+    * **Clareza e Fluidez:** O texto deve ser claro, direto e fluir naturalmente, como se fosse um artigo bem escrito.
+    
+5.  **Formato de Saída:**
     Apresente o resumo utilizando a seguinte estrutura em Markdown, preenchendo as seções com o conteúdo extraído:
 
-Resumo Detalhado do Documento: [Título do PDF, se disponível, ou "Documento Fornecido"]
+```markdown
+### Resumo Detalhado do Documento: [Título do PDF, se disponível, ou "Documento Fornecido"]
 
-1. Introdução e Contexto Geral:
-
+**1. Introdução e Contexto Geral:**
 [Breve parágrafo contextualizando o documento, seu propósito e o que ele aborda.]
 
-2. Principais Seções/Capítulos e Tópicos Abordados:
+**2. Principais Seções/Capítulos e Tópicos Abordados:**
 
-[Título da Seção/Capítulo 1]:
-    Conceito/Ponto 1.1: [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
-    Conceito/Ponto 1.2: [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
-    (Adicionar mais pontos conforme necessário)
+* **[Título da Seção/Capítulo 1]:**
+    * **Conceito/Ponto 1.1:** [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
+    * **Conceito/Ponto 1.2:** [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
+    * ... (Adicionar mais pontos conforme necessário)
 
-[Título da Seção/Capítulo 2]:
-    Conceito/Ponto 2.1: [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
-    Conceito/Ponto 2.2: [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
-    (Adicionar mais pontos conforme necessário)
+* **[Título da Seção/Capítulo 2]:**
+    * **Conceito/Ponto 2.1:** [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
+    * **Conceito/Ponto 2.2:** [Explicação detalhada e simplificada. Incluir exemplos relevantes aqui.]
+    * ... (Adicionar mais pontos conforme necessário)
 
-(Continuar para todas as seções/capítulos relevantes do PDF)
+* ... (Continuar para todas as seções/capítulos relevantes do PDF)
 
-3. Conclusões Principais e Implicações:
-
+**3. Conclusões Principais e Implicações:**
 [Um parágrafo final sintetizando as conclusões mais importantes do documento e suas possíveis implicações ou recomendações.]
-
+```
 """
 
 # *****************************************************************************
