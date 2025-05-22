@@ -261,7 +261,7 @@ if uploaded_file is not None:
                   file_name=f"resumo_{uploaded_file.name}",
                   mime="application/pdf"
               )
-              st.markdown(summary_result)
+              #st.markdown(summary_result) print result 
               try:
                 os.remove(tmp_file_path)
               except OSError as e:
