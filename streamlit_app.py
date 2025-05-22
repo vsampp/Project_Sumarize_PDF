@@ -220,7 +220,7 @@ if uploaded_file is not None:
         tmp_file_path = tmp_file.name
         st.success(f"PDF '{uploaded_file.name}' carregado com sucesso!")
 
-    if st.button("Sumarizar"):
+    if st.button("Resumir"):
         with st.spinner("Gerando resumo... Isso pode levar alguns momentos."):
           summary_result = process_pdf_with_gemini(tmp_file_path, few_shot_prompt_sumarize)
 
