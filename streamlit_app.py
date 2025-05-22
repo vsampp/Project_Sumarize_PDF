@@ -22,6 +22,12 @@ import requests # For HTTP requests
 import warnings
 import PyPDF2 as pdf # For read PDF
 
+from reportlab.lib.pagesizes import letter
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
+from reportlab.lib.styles import getSampleStyleSheet
+from io import BytesIO # To handle in-memory bytes for PDF
+
+
 warnings.filterwarnings("ignore")
 
 # *****************************************************************************
@@ -82,6 +88,26 @@ def process_pdf_with_gemini(file_path, prompt):
             return None
     else:
         return None
+
+# Function to create a PDF from text
+def create_pdf_for_download(text_content, filename="resumo.pdf"):
+    buffer = BytesIO()
+    doc = SimpleDocTemplate(buffer, pagesize=letter)
+    styles = getSampleStyleSheet()
+    story = []
+
+    # Add content to the PDF
+    # Split text into paragraphs for better formatting
+    paragraphs = text_content.split('\n')
+    for para in paragraphs:
+        if para.strip():  # Only add non-empty paragraphs
+            # Use Paragraph for better text flow and styling
+            story.append(Paragraph(para, styles['Normal']))
+            story.append(Spacer(1, 12))  # Add some space between paragraphs
+
+    doc.build(story)
+    buffer.seek(0)
+    return buffer.getvalue()
 
 # *****************************************************************************
 # GOOGLE API KEY
@@ -223,6 +249,16 @@ if uploaded_file is not None:
           summary_result = process_pdf_with_gemini(tmp_file_path, few_shot_prompt_sumarize)
 
           if summary_result:
+             # Generate PDF for download
+              pdf_bytes = create_pdf_for_download(summary_result, f"resumo_{uploaded_file.name}")
+              st.download_button(
+                  label="Download Resumo em PDF",
+                  data=pdf_bytes,
+                  file_name=f"resumo_{uploaded_file.name}",
+                  mime="application/pdf"
+              )
+
+              
               st.subheader("Resumo finalizado, aproveite:")
               st.markdown(summary_result)
               try:
