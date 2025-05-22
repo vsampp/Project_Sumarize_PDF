@@ -182,9 +182,7 @@ st.markdown(
         cursor: pointer;
         transition: background-color 0.3s ease;
     }
-    .stButton>button:hover {
-        background-color: #45a049;
-    }
+  
     .stFileUploader {
         border: 2px dashed #ccc;
         border-radius: 8px;
