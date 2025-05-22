@@ -234,7 +234,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.subheader("Revisar PDF's com Google Gemini")
+st.subheader("Revisar PDF's")
 st.markdown("Revise seus textos, artigos, anotações físicas e digitais com resumos gerados pela Google Gemini")
 st.markdown("Faça o upload de seu arquivo PDF:")
 uploaded_file = st.file_uploader("Escolha um arquivo PDF", type="pdf")
